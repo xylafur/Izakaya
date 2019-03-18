@@ -6,6 +6,6 @@ layout: default
 <h1>Session Notes</h1>
 <ul>
     {% for post in site.posts %}
-        <h3><li><a href="{{ post.url }}">{{ post.title }} {{ post.date }}</a></li></h3>
+        <h3><li><a href="{{ site.url}}{{site.baseurl}}/{{ post.url }}">{{ post.title }} {{ post.date }}</a></li></h3>
     {% endfor %}
 </ul>
