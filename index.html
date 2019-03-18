@@ -4,30 +4,28 @@
 title: "Home"
 layout: default
 ---
-<div class="container-fluid bg-1 text-center">
-    <h1>Esakia Campaign Home Page</h1>
-    <button data-toggle="collapse" data-target="#sessions" class="btn btn-info">Sessions</button>
-    <button data-toggle="collapse" data-target="#character_sheets" class="btn btn-info">Character Sheets</button>
-    <div class="container-fluid">
-        <div class="well bg-2 collapse in" id="sessions">
-            <h3>Session Notes</h3>
-                <ul>
-                    {% for session in site.static_files %}
-                        {% if session.path contains 'sessions' %}
-                        <li><a href="{{ session.path }}"> {{ session.basename }} </a></li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            </div>
-        <div class="well bg-2 collapse in" id="character_sheets">
-            <h3>Character Sheets</h3>
-            <ul>
-                {% for sheet in site.static_files %}
-                    {% if sheet.path contains 'character_sheets' %}
-                    <li><a href="{{ sheet.path }}"> {{ sheet.basename }} </a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
+<div class="container">
+    <div class="column sidenav">
+        <h1>{{ site.title }}</h1>
+        {% for page in site.pages %}
+        <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+        {% endfor %}
+    </div>
+    <div class="bg-2">
+        <h1>Session Notes</h1>
+        <ul>
+            {% for post in site.posts %}
+                <h3><li><a href="{{ post.url }}">{{ post.title }} {{ post.date }}</a></li></h3>
+            {% endfor %}
+        </ul>
+
+        <h1>Character Sheets</h1>
+        <ul>
+            {% for sheet in site.static_files %}
+                {% if sheet.path contains 'character_sheets' %}
+                <h3><li><a href="{{ sheet.path }}"> {{ sheet.basename }} </a></li></h3>
+                {% endif %}
+            {% endfor %}
+        </ul>
     </div>
 </div>
