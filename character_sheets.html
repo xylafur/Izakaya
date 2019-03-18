@@ -6,7 +6,7 @@ layout: default
 <ul>
     {% for sheet in site.static_files %}
         {% if sheet.path contains 'character_sheets' %}
-        <h3><li><a href="{{ sheet.path }}"> {{ sheet.basename }} </a></li></h3>
+        <h3><li><a href="{{ site.url }}{{site.baseurl}}{{ sheet.path }}"> {{ sheet.basename }} </a></li></h3>
         {% endif %}
     {% endfor %}
     
