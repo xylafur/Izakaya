@@ -3,7 +3,16 @@
     {% include header.html %}
     <body>
         {% include scripts.html %}
-        {{ content }}
+        <div class="container">
+            <div class="column sidenav">
+                <h1>{{ site.title }}</h1>
+                <h2><a href="{{ site.url }}">Home</a></h2>
+                {% for page in site.pages %}
+                <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                {% endfor %}
+            </div>
+            <div class="column"> {{ content }} </div>
+        </div>
         {% include footer.html %}
     </body>
 </html>

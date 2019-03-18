@@ -1,0 +1,12 @@
+---
+title: "character sheets"
+layout: default
+---
+<h1>Character Sheets</h1>
+<ul>
+    {% for sheet in site.static_files %}
+        {% if sheet.path contains 'character_sheets' %}
+        <h3><li><a href="{{ sheet.path }}"> {{ sheet.basename }} </a></li></h3>
+        {% endif %}
+    {% endfor %}
+</ul>
