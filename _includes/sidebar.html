@@ -1,8 +1,8 @@
  <!-- Side navigation -->
  <div class="sidenav">
     <h1> <b> {{ site.title }} </b> </h1>
-    <h3> <a href="{{site.url}}{{site.baseurl}}/"> Home </a> </h3>
-    {% for page in site.pages %}
-        <h3> <a href="{{ site.url }}{{ site.baseurl }}/{{ page.path }}"> {{ page.title }} </a> </h3>
-    {% endfor %}
+    <ul>
+        <h3><li> <a href="{{site.url}}{{site.baseurl}}/"> Home </a> </li></h3>
+        <h3><li> <a href="{{ site.url }}{{ site.baseurl }}/character_sheets.html"> Character Sheets </a> </li></h3> 
+    </ul>
 </div>
