@@ -10,17 +10,23 @@ layout: default
     <button data-toggle="collapse" data-target="#character_sheets" class="btn btn-info">Character Sheets</button>
     <div class="container-fluid">
         <div class="well bg-2 collapse in" id="sessions">
-                <h3>Session Notes</h3>
+            <h3>Session Notes</h3>
                 <ul>
-                    <li><a href="./session2.txt">Session 2</a></li>
-                    <li><a href="./session3.txt">Session 3</a></li>
-                    <li><a href="./session4.txt">Session 4</a></li>
+                    {% for session in site.static_files %}
+                        {% if session.path contains 'sessions' %}
+                        <li><a href="{{ session.path }}"> {{ session.basename }} </a></li>
+                        {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
         <div class="well bg-2 collapse in" id="character_sheets">
             <h3>Character Sheets</h3>
             <ul>
-                <li><a href="./Barbra.pdf">Barbra (Kesley)</a></li>
+                {% for sheet in site.static_files %}
+                    {% if sheet.path contains 'character_sheets' %}
+                    <li><a href="{{ sheet.path }}"> {{ sheet.basename }} </a></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
     </div>
