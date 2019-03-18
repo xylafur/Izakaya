@@ -1,18 +1,27 @@
-<html>
-    <head>
-        <h1>Esakia Campaign Home Page</h1>
-    </head>
-    <body>
-        <h2>Sessions</h2>
-        <ul>
-            <li><a href="./session2.txt">Session 2</a></li>
-            <li><a href="./session3.txt">Session 3</a></li>
-            <li><a href="./session4.txt">Session 4</a></li>
-        </ul>
-
-        <h2>Character Sheets</h2>
-        <ul>
-            <li><a href="./Barbra.pdf">Barbra (Kesley)</a></li>
-        </ul>
-    </body>
-</html>
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+title: "Home"
+layout: default
+---
+<div class="container-fluid bg-1 text-center">
+    <h1>Esakia Campaign Home Page</h1>
+    <button data-toggle="collapse" data-target="#sessions" class="btn btn-info">Sessions</button>
+    <button data-toggle="collapse" data-target="#character_sheets" class="btn btn-info">Character Sheets</button>
+    <div class="container-fluid">
+        <div class="well bg-2 collapse in" id="sessions">
+                <h3>Session Notes</h3>
+                <ul>
+                    <li><a href="./session2.txt">Session 2</a></li>
+                    <li><a href="./session3.txt">Session 3</a></li>
+                    <li><a href="./session4.txt">Session 4</a></li>
+                </ul>
+            </div>
+        <div class="well bg-2 collapse in" id="character_sheets">
+            <h3>Character Sheets</h3>
+            <ul>
+                <li><a href="./Barbra.pdf">Barbra (Kesley)</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
