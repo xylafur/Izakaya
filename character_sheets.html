@@ -6,8 +6,10 @@ layout: default
 <ul>
     {% for sheet in site.static_files %}
         {% if sheet.path contains 'character_sheets' %}
-        <h3><li><a href="{{ site.url }}{{site.baseurl}}{{ sheet.path }}"> {{ sheet.basename }} </a></li></h3>
+        <h3><li>
+            <a href="{{ site.url }}{{site.baseurl}}{{ sheet.path }}"> {{ sheet.basename }} </a> 
+        </li></h3>
+        <iframe src="http://docs.google.com/viewer?url={{ site.url }}{{site.baseurl}}{{ sheet.path }}&embedded=true" width="600" height="780" style="border: none;"></iframe>
         {% endif %}
     {% endfor %}
-
 </ul>
