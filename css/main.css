@@ -2,9 +2,7 @@
 /* The side navigation menu */
 .sidebar {
     margin: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    width: 30rem;
+    width: 32rem;
     background-color: #000;
     position: fixed;
     height: 100%;
@@ -25,7 +23,16 @@
 }
 /* Style page content */
 .main {
-    margin-left: 30rem; /* Same as the width of the sidebar */
+    margin-left: 32rem; /* Same as the width of the sidebar */
+    padding: 10px;
+}
+
+.logo {
+    margin: 10px;
+    padding: 10px;
+    background-color: #292929;
+}
+#sidebar-links h3 {
     padding: 10px;
 }
 
@@ -35,8 +42,9 @@
         width: 100%;
         height: 100%;
         position: relative;
+        text-align: center;
     }
-    .sidebar a {float: left;}
+    .sidebar a { float: left; margin-left: 10%; }
     .main { margin-left: 0rem; }
 }
 
@@ -45,6 +53,7 @@
     .sidebar a {
         text-align: center;
         float: none;
+        margin-left: inherit;
     }
     .main { margin-left: 0rem; }
 }
@@ -55,11 +64,37 @@
 }
 
 body {
+    color: white;
     background-color: #292929;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/84/Twenty_sided_dice.svg");
+    background-repeat: repeat;
+    /*
     background-size: 20%;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 50% 50%;
     background-attachment: fixed;
-    color: #fff;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/84/Twenty_sided_dice.svg");
+    */
+    background-image:
+        linear-gradient(
+            0deg,
+            transparent 24%,
+            rgba(255,255,255, .05) 25%, 
+            rgba(255,255,255,.05) 26%, 
+            transparent 27%, transparent 74%, 
+            rgba(255,255,255, .05) 75%,
+            rgba(255,255,255,.05) 76%,
+            transparent 77%, transparent),
+        linear-gradient(
+            90deg,
+            transparent 24%, 
+            rgba(255,255,255, .05) 25%, 
+            rgba(255,255,255, 0.05) 26%, 
+            transparent 27%, 
+            transparent 74%, 
+            rgba(255,255,255, 0.05) 75%, 
+            rgba(255,255,255, 0.05) 76%, 
+            transparent 77%, 
+            transparent);
+    height: 100%;
+    background-size: 50px 50px;
 }
