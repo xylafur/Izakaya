@@ -11,6 +11,7 @@
 
 /* Sidebar links */
 .sidebar a {
+    padding: 10px;
     display: block;
     color: white;
     text-decoration: none;
@@ -30,10 +31,8 @@
 .logo {
     margin: 10px;
     padding: 10px;
+
     background-color: #292929;
-}
-#sidebar-links h3 {
-    padding: 10px;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
