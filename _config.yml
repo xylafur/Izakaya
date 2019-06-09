@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Isekai Campaign
+title: Izakaya Campaign
 description: >- # this means to ignore newlines until "baseurl:"
-  Website to host notes and character sheets for esakia campaign
-baseurl: "/Esakia_Campaign" # the subpath of your site, e.g. /blog
+  Website to host notes and character sheets for Izakaya campaign
+baseurl: "/Izakaya" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
