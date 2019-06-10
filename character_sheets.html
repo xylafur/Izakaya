@@ -4,10 +4,6 @@ layout: default
 ---
 <h1>Character Sheets</h1>
 <ul>
-    <h3><li>
-        <a href="https://www.dndbeyond.com/characters/8585918/t0YZKu">Lionel</a>
-    </li></h3>
-
     {% for sheet in site.static_files %}
         {% if sheet.path contains 'character_sheets' %}
         <h3><li>
